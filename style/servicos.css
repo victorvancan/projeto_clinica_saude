@@ -1,0 +1,24 @@
+
+/* Estilo para os botões "Adicionar ao Carrinho" e "Remover do Carrinho" */
+.add-to-cart,
+.remove-from-cart {
+    background-color: #1ebeb6; 
+    color: white; 
+    padding: 5px 10px; /* Espaçamento interno */
+    border: none; /* Remover a borda */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    display: inline-block; /* Exibir em linha */
+    margin-right: 5px; /* Margem à direita para espaçamento entre os botões */
+}
+
+/* Estilo ao passar o mouse sobre os botões */
+.add-to-cart:hover,
+.remove-from-cart:hover {
+    background-color: #138f89; /* Cor de fundo azul mais escura no hover */
+}
+
+/* Estilo para o campo de quantidade */
+input[type='number'] {
+    width: 50px; /* Largura do campo de quantidade */
+    padding: 5px; /* Espaçamento interno */
+}
