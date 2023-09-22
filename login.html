@@ -6,22 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login </title>
 
-    <link rel="stylesheet" href="/style/styleLogin.css">
+    <link rel="stylesheet" href="/style/stylecadastro.css">
 
     
 </head>
 <body id="bodylogin">
     
     
-    <form>
-        <div class="main-inner-home">
-            <div class="rigth-content-img">
-                <img src="/images/doctor.png" , alt="" ,>
-            </div>
+    <form id="register-form">
+
+        <div class="full-box ">
+            <label for="name">Nome</label>
+            <input type="text" name="name" id="login" placeholder="Digite seu login" data-required data-min-length="3" data-max-length="16">
         </div>
-        <h3>Login</h3>
-        <input type="text" placeholder="Login" id="login">
-        <input type="password" placeholder="Senha" id="senha">
+        <div class="full-box">
+            <input type="password" placeholder="senha" id="senha">
+        </div>
         <input type="submit" placeholder="Fazer login" onclick="logar(); return false">
         <a href="/paginas-header/paginaDeCadastro.html">cadastre-se aqui</a>
        
