@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login </title>
+
+    <link rel="stylesheet" href="/style/styleLogin.css">
+
+    
+</head>
+<body id="bodylogin">
+    
+    
+    <form>
+        <div class="main-inner-home">
+            <div class="rigth-content-img">
+                <img src="/images/doctor.png" , alt="" ,>
+            </div>
+        </div>
+        <h3>Login</h3>
+        <input type="text" placeholder="Login" id="login">
+        <input type="password" placeholder="Senha" id="senha">
+        <input type="submit" placeholder="Fazer login" onclick="logar(); return false">
+        <a href="/paginas-header/paginaDeCadastro.html">cadastre-se aqui</a>
+       
+    </form>
+
+
+    <script>
+
+
+        function logar(){
+
+            var login = document.getElementById('login').value;
+            var senha = document.getElementById('senha').value;
+
+            if(login == "Admin" && senha == "admin"){
+                location.href = "/index.html";
+            }else{
+                alert('Usuario ou senha incorretos');
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

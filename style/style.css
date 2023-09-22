@@ -32,7 +32,9 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-
+.bodylogin body{
+    background-color: #1ebeb6;
+}
 body {
     background: #f7f7f7;
 }
@@ -459,3 +461,5 @@ nav a {
     color: var(--button-color);
     cursor: pointer;
 }
+
+
