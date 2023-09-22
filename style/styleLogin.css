@@ -47,7 +47,8 @@ img {
 
 label {
     font-weight: bold;
-    font-size: .8rem;
+    font-size: 50px;
+    color: #FFF;
   }
   
   input {
@@ -58,11 +59,11 @@ label {
   }
   
   input:focus {
-    border-color: #1ebeb6;
+    border-color: #323232;
   }
   
   input[type="submit"] {
-    background-color: #1ebeb6;
+    background-color: #323232;
     color: #FFF;
     border: none;
     border-radius: 20px;
