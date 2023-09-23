@@ -28,11 +28,32 @@ if (document.readyState == 'loading') {
     // Botão comprar
     const purchaseButton = document.getElementsByClassName("purchase-button")[0]
     purchaseButton.addEventListener("click", makePurchase)
+  
+    // Recuperar itens do carrinho do localStorage
+    const cartItems = localStorage.getItem("cartItems")
+    if (cartItems) {
+      const tableBody = document.querySelector(".cart-table tbody")
+      tableBody.innerHTML = cartItems
+  
+      // Adicionar eventos aos botões e inputs dos itens recuperados
+      const cartProductButtons = document.getElementsByClassName("remove-product-button")
+      for (var i = 0; i < cartProductButtons.length; i++) {
+        cartProductButtons[i].addEventListener("click", removeProduct)
+      }
+  
+      const cartQuantityInputs = document.getElementsByClassName("product-qtd-input")
+      for (var i = 0; i < cartQuantityInputs.length; i++) {
+        cartQuantityInputs[i].addEventListener("change", checkIfInputIsNull)
+      }
+  
+      updateTotal()
+    }
   }
   
   function removeProduct(event) {
     event.target.parentElement.parentElement.remove()
     updateTotal()
+    saveCartItems()
   }
   
   function checkIfInputIsNull(event) {
@@ -41,6 +62,7 @@ if (document.readyState == 'loading') {
     }
   
     updateTotal()
+    saveCartItems()
   }
   
   function addProductToCart(event) {
@@ -55,6 +77,7 @@ if (document.readyState == 'loading') {
       if (productsCartNames[i].innerText === productName) {
         productsCartNames[i].parentElement.parentElement.getElementsByClassName("product-qtd-input")[0].value++
         updateTotal()
+        saveCartItems()
         return
       }
     }
@@ -76,10 +99,11 @@ if (document.readyState == 'loading') {
           <button type="button" class="remove-product-button">Remover</button>
         </td>
       `
-    
+  
     const tableBody = document.querySelector(".cart-table tbody")
     tableBody.append(newCartProduct)
     updateTotal()
+    saveCartItems()
   
     newCartProduct.getElementsByClassName("remove-product-button")[0].addEventListener("click", removeProduct)
     newCartProduct.getElementsByClassName("product-qtd-input")[0].addEventListener("change", checkIfInputIsNull)
@@ -88,7 +112,7 @@ if (document.readyState == 'loading') {
   function makePurchase() {
     if (totalAmount === "0,00") {
       alert("Seu carrinho está vazio!")
-    } else {   
+    } else {
       alert(
         `
           Obrigado pela sua compra!
@@ -99,6 +123,7 @@ if (document.readyState == 'loading') {
   
       document.querySelector(".cart-table tbody").innerHTML = ""
       updateTotal()
+      saveCartItems()
     }
   }
   
@@ -113,8 +138,16 @@ if (document.readyState == 'loading') {
   
       totalAmount += productPrice * productQuantity
     }
-    
+  
     totalAmount = totalAmount.toFixed(2)
     totalAmount = totalAmount.replace(".", ",")
     document.querySelector(".cart-total-container span").innerText = "R$" + totalAmount
   }
+  
+  // Salvar itens do carrinho no localStorage
+  function saveCartItems() {
+    const tableBody = document.querySelector(".cart-table tbody")
+    const cartItems = tableBody.innerHTML
+    localStorage.setItem("cartItems", cartItems)
+  }
+  

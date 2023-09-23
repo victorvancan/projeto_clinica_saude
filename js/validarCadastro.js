@@ -102,6 +102,8 @@ class Validator {
       if(!re.test(email)) {
         this.printMessage(input, errorMessage);
       }
+
+      let emailcorreto = email;
   
     }
   
@@ -152,7 +154,8 @@ class Validator {
   
         this.printMessage(input, errorMessage);
       }
-  
+      
+      let senha = input;
     }
   
     // método para imprimir mensagens de erro
@@ -193,4 +196,7 @@ class Validator {
     e.preventDefault();
   
     validator.validate(form);
+
+    window.location.href = "/index.html";
   });
+  
