@@ -11,6 +11,7 @@ body{
     height: 100%;
     background-image: url('/images/doctor.png');
     background-position-y: -150px;
+    opacity: 1;
 }
 
 form{
@@ -38,6 +39,15 @@ a {
     font-size: 1.5rem;
     margin: 0 1.5rem;
     text-decoration: none;
+}
+
+a:hover {
+  background-color: #FFF;
+  color: #138f89;
+  border: none;
+  border-radius: 15px;
+  height: 40px;
+  cursor: pointer;
 }
 
 img {
