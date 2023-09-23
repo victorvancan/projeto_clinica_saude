@@ -13,7 +13,7 @@
   box-sizing: border-box;
 }
 
-body, button, input, textarea {
+button, input, textarea {
   font: 'Montserrat', sans-serif;;
 }
 
@@ -440,4 +440,11 @@ hr {
   .movie-title-medium {
     margin-bottom: 16px;
   }
+}
+
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-image: url('/images/doctor.png');
+  background-position-y: -150px;
 }
