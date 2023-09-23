@@ -459,5 +459,7 @@ nav a {
     color: var(--button-color);
     cursor: pointer;
 }
-
+hr{
+    width: 9%;
+}
 
