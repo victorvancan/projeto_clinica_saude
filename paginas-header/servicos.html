@@ -1,242 +1,138 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-<link rel="stylesheet" href="/style/style.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-<link rel="stylesheet" href="/style/servicos.css">
-<script src="https://unpkg.com/phosphor-icons"></script>
-<script src="/js/servicos.js"></script>
+    <link rel="stylesheet" href="/style/servicos.css">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
 
-<head>
-    <header>
+    <script src="/js/servicos.js" async></script>
 
-        <div class="logo"><img src="/images/healthcare.png" alt="" height="60"></div>
-
-        <nav class="navbar">
-            <a href="/index.html">Inicio</a>
-            <a href="/paginas-header/servicos.html">serviços oferecidos</a>
-            <a href="/paginas-header/areas.html">Areas da saude atendidas</a>
-            <a href="/paginas-header/sobreOA nossa clinica.html">sobre o A nossa clinica</a>
-        </nav>
-
-
-
-        <script src="/js/sugestao.js"></script>
-        <script src="/js/script.js"></script>
-    </header>
-</head>
-
-<body>
-    <div class="home">
-        <div class="home-back">
-        </div>
-        <div class="main-home">
-            <div class="main-inner-home">
-                <h2>Bem-vindo à nossa Clínica de Saúde Multidisciplinar - A nossa clinica</h2>
-                <h1>Conheça os servicos que nossa clinica oferece</h1>
-            </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="servicos.js"></script>
-
-    <div class="areas">
-        <div class="areas-heading">
-            <h1><span>nossos servicos:</span></h1>
-        </div>
-            <div class="main-inner-areas">
-                <div class="areas-content">
-                    <h2>Convênio na farmacia de manipulação A nossa clinica</h2>
-                    <p>Convênio básico - R$ 199,00
-                    </p>
-                         <!-- Botões "Adicionar ao Carrinho" e "Remover do Carrinho" -->
-                         <button class="add-to-cart" data-preco="199.00">Adicionar ao Carrinho</button>
-                         <button class="remove-from-cart">Remover do Carrinho</button>
-                         <input type="number" min="1" value="1">
-                        <!-- Campo para editar a quantidade -->
-                </div>
-                <div class="areas-img">
-                    <img src="/images/acesso-medicamentos.jpg" , alt="">
-                </div>
-            </div>
-
-            <div class="main-inner-areas">
-                <div class="areas-content">
-                    <h2>psicologo</h2>
-                    <p>Plano com duas consultas na semana p/ mês - R$ 599,99</p>
-                        <!-- Botões "Adicionar ao Carrinho" e "Remover do Carrinho" -->
-                        <button class="add-to-cart" data-preco="599.99">Adicionar ao Carrinho</button>
-                        <button class="remove-from-cart">Remover do Carrinho</button>
-                        <input type="number" min="1" value="1">
-                        <!-- Campo para editar a quantidade -->
-                    
-                        <div class="areas-img">
-                            <img src="/images/neuro.jpg" , alt="">
-                        </div>
-
-                </div>
-
-
-            </div>
-
-            <div class="main-inner-areas">
-                <div class="areas-content">
-                    <h2>Reabilitação</h2>
-                    <p>Programa de recuperação de vicios - R$ 770,00</p>
-                        <!-- Botões "Adicionar ao Carrinho" e "Remover do Carrinho" -->
-                        <button class="add-to-cart" data-preco="770.00">Adicionar ao Carrinho</button>
-                        <button class="remove-from-cart">Remover do Carrinho</button>
-                        <input type="number" min="1" value="1">
-                        <!-- Campo para editar a quantidade -->
-                </div>
-                <div class="areas-img">
-                    <img src="/images/acompanhamento-fisio.jpg" , alt="">
-                </div>
-   
-            </div>
-
-            <div class="main-inner-areas">
-                <div class="areas-content">
-                    <h2>Dentista</h2>
-                    <p>Consulta com dentista - R$ 120,00</p>
-                    <!-- Botões "Adicionar ao Carrinho" e "Remover do Carrinho" -->
-                    <button class="add-to-cart" data-preco="120.00">Adicionar ao Carrinho</button>
-                    <button class="remove-from-cart">Remover do Carrinho</button>
-                    <input type="number" min="1" value="1">
-                    <!-- Campo para editar a quantidade -->
-                </div>
-                <div class="areas-img">
-                    <img src="/images/odonto.jpg" , alt="">
-                </div>
-
-            </div>
-        </div>
-    </div>
-    
-        <!-- Carrinho de compras -->
-        <div id="carrinho" style="position: fixed; bottom: 20px; right: 20px; background-color: white; padding: 10px; border: 1px solid #ccc;">
-            <h3>Carrinho de Compras</h3>
-            <ul id="itens-carrinho">
-                <!-- Itens do carrinho serão adicionados aqui -->
+    <title>Serviços oferecidos</title>
+  </head>
+  <body>
+    <header class="main-header">
+        <nav class="main-nav container">
+            <ul class="header-list-container list-container">
+              <li class="nav-item">
+                <a href="/index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a href="sobre.html">Sobre</a>
+              </li>
+              <li>
+                <img src="/images/user.png"/ height="30"><a href="/login.html">Login</a>
+              </li>
             </ul>
-            <p>Total: <span id="total-carrinho">R$ 0,00</span></p>
-        </div>
+          </nav>
+      <hr>
+      <h1 class="movie-title-large movie-title">Serviços oferecidos</h1>
+      <!-- Adicionar imagem de fundo no CSS -->
+    </header>
 
+    <main class="main-section">
+      <section class="container normal-section">
+        <h2 class="section-title">Consultas</h2>
 
-    <div class="nossos-servicos">
-        <div class="servicos-heading">
-            <h1>Conheça outros <span>serviços</span></h1>
-
-            <!-- Carrosel de imagens -->
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="carrosel-imagem">
-                            <img src="/images/hospital.jpg" alt="">
-                            <div class="imagem-conteudo">
-                                <h2>Acesso a hospitais</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="carrosel-imagem">
-                            <img src="/images/cirurgias.jpg" alt="">
-                            <h2>Acesso a varios tipos de cirurgias</h2>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="carrosel-imagem">
-                            <img src="/images/exame-medico.jpg" alt="">
-                            <h2>Acesso a varios tipos de exames medicos</h2>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="carrosel-imagem">
-                            <img src="/images/exame-odonto.jpg" alt="">
-                            <h2>Acesso a varios tipos de exames e serviços Odontologicos</h2>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="carrosel-imagem">
-                            <img src="/images/acompanhamento-fisio.jpg" alt="">
-                            <h2>Acesso a varios tipos de Acompnhamentos de Fisioterapia</h2>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="carrosel-imagem">
-                            <img src="/images/acesso-medicamentos.jpg" alt="">
-                            <h2>Acesso a uma farmacia para medicamentos gratuitos</h2>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="carrosel-imagem">
-                            <img src="/images/acesso-vacinas.jpg" alt="">
-                            <h2>Acesso a varios tipos de vacinas</h2>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="swiper-pagination"></div>
+        <div class="products-container">
+          <div class="movie-product">
+            <strong class="product-title">cardiologista</strong>
+            <!-- <br> -->
+            <img src="/images/cardiologista.jpg" alt="doctor.png" class="product-image">
+            <div class="product-price-container">
+              <span class="product-price">R$499,99</span>
+              <button type="button" class="button-hover-background">Adicionar ao carrinho</button>
             </div>
-        </div>
+          </div>
 
-    </div>
-
-
-    
-
-
-    <script src="script.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-    <!-- Iniciando carrosel -->
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 3,
-            spaceBetween: 30,
-            freeMode: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-        });
-    </script>
-
-    <div class="mapa">
-        <div class="mapa-heading">
-            <h2>Veja os <span>hospitais</span> proximos a voce</h2>
-        </div>
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d14669.470107810923!2d-46.88910203706541!3d-23.193273017531943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1shospiais!5e0!3m2!1spt-BR!2sbr!4v1684882954608!5m2!1spt-BR!2sbr"
-            width="3000" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-</body>
-
-<footer>
-    <div class="footer">
-        <div class="main-footer">
-            <div class="main-inner-footer">
-                <h2>Links uteis</h2>
-                <nav class="navbar">
-                    <a href="/index.html">Inicio</a>
-                    <a href="/paginas-header/servicos.html">serviços oferecidos</a>
-                    <a href="/paginas-header/areas.html">Areas da saude atendidas</a>
-                    <a href="/paginas-header/sobreOA nossa clinica.html">sobre o A nossa clinica</a>
-                    <a href="/paginas-header/lugaresproximos.html">Lugares proximos</a>
-                    <a href="https://conecteA nossa clinica.saude.gov.br/home">ConecteA nossa clinica</a>
-                    <a href="https://www.gov.br/saude/pt-br">Site A nossa clinica</a>
-                </nav>
-        
+          <div class="movie-product">
+            <strong class="product-title">Neurologista</strong>
+            <!-- <br> -->
+            <img src="/images/neuro.jpg" alt="doctor" class="product-image">
+            <div class="product-price-container">
+              <span class="product-price">R$599,99</span>
+              <button type="button" class="button-hover-background">Adicionar ao carrinho</button>
             </div>
+          </div>
+  
+          <div class="movie-product">
+            <strong class="product-title">Oftalmologista</strong>
+            <!-- <br> -->
+            <img src="/images/oftalmo.jpg" alt="doctor" class="product-image">
+            <div class="product-price-container">
+              <span class="product-price">R$199,99</span>
+              <button type="button" class="button-hover-background">Adicionar ao carrinho</button>
+            </div>
+          </div>
+  
+          <div class="movie-product">
+            <strong class="product-title">Fisioterapia</strong>
+            <!-- <br> -->
+            <img src="/images/Fisio.jpg" alt="doctor" class="product-image">
+            <div class="product-price-container">
+              <span class="product-price">R$159,99</span>
+              <button type="button" class="button-hover-background">Adicionar ao carrinho</button>
+            </div>
+          </div>
         </div>
-    </div>
-</footer>
+      </section>
 
+      <section class="container normal-section">
+        <h2 class="section-title">Cirurgias</h2>
+
+        <div class="products-container">
+          <div class="movie-product">
+            <strong class="product-title">cirurgia Oftalmologia</strong>
+            <!-- <br> -->
+            <img src="/images/oftalmo.jpg" alt="doctor" class="product-image">
+            <div class="product-price-container">
+              <span class="product-price">R$3000,99</span>
+              <button type="button" class="button-hover-background">Adicionar ao carrinho</button>
+            </div>
+          </div>
+
+          <div class="movie-product">
+            <strong class="product-title">Cirurgia cardiaca</strong>
+            <!-- <br> -->
+            <img src="/images/cardiologista.jpg" alt="doctor" class="product-image">
+            <div class="product-price-container">
+              <span class="product-price">R$6999,90</span>
+              <button type="button" class="button-hover-background">Adicionar ao carrinho</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container normal-section">
+        <h2 class="section-title">Carrinho</h2>
+
+        <table class="cart-table">
+          <thead>
+            <tr>
+              <th class="table-head-item first-col">Item</th>
+              <th class="table-head-item second-col">Preço</th>
+              <th class="table-head-item third-col">Quantidade</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+          </tbody>
+
+          <tfoot>
+            <tr>
+              <td colspan="3" class="cart-total-container">
+                <strong>Total</strong>
+                <span>R$0,00</span>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+
+        <button type="button" class="purchase-button">Finalizar Compra</button>
+      </section>
+    </main>
+  </body>
 </html>
