@@ -197,6 +197,6 @@ class Validator {
   
     validator.validate(form);
 
-    window.location.href = "/indexLogin.html";
+    window.location.href = "indexLogin.html";
   });
   
