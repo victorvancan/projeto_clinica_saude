@@ -1,0 +1,11 @@
+body {
+    padding-top: 5vh;
+    background-image: url('/images/doctor.png');
+    background-position-y: -150px;
+    font-family: Helvetica, sans-serif;
+  }
+h1{
+    background-color: #1ebeb6;
+    color: white;
+    text-align: center;
+}
