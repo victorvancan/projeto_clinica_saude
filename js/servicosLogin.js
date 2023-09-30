@@ -117,7 +117,7 @@ if (document.readyState == 'loading') {
         `
           Obrigado pela sua compra!
           Valor do pedido: R$${totalAmount}\n
-          Para finalizar o seu pedido, por favor faça o login/cadastro!
+          Vamos te redirecionar para pagina de pagamento.
         `
       )
       window.location.href = "/login.html";
