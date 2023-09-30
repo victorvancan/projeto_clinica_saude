@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login </title>
+
+    <link rel="stylesheet" href="style/styleLogin.css">
+
+
+</head>
+
+<body id="bodylogin">
+
+
+    <form id="register-form">
+
+        <div class="full-box ">
+            <label for="name">Login</label>
+            <input type="text" name="name" id="login" placeholder="Digite seu e-mail" data-required data-min-length="3"
+                data-max-length="16">
+        </div>
+        <div class="full-box">
+            <input type="password" placeholder="senha" id="senha">
+        </div>
+        <input type="submit" placeholder="Fazer login" onclick="logar(); return false">
+        <a href="paginas-header/paginaDeCadastro.html">cadastre-se aqui</a>
+
+    </form>
+
+
+    <script>
+
+
+        function logar() {
+            var login = document.getElementById('login').value;
+            var senha = document.getElementById('senha').value;
+
+            var emailCorreto = "admin@admin.com";
+            var senhaCorreta = "admin";
+
+            if (login == emailCorreto && senha == senhaCorreta) {
+                location.href = "/index.html";
+            } else {
+                alert('Usuário ou senha incorretos');
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>
