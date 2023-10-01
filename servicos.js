@@ -120,7 +120,7 @@ if (document.readyState == 'loading') {
           Para finalizar o seu pedido, por favor faça o login/cadastro!
         `
       )
-      window.location.href = "checkout.html";
+      window.location.href = "login.html";
       document.querySelector(".cart-table tbody").innerHTML = ""
       updateTotal()
       saveCartItems()

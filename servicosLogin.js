@@ -120,7 +120,7 @@ if (document.readyState == 'loading') {
           Vamos te redirecionar para pagina de pagamento.
         `
       )
-      window.location.href = "/login.html";
+      window.location.href = "checkout.html";
       document.querySelector(".cart-table tbody").innerHTML = ""
       updateTotal()
       saveCartItems()
