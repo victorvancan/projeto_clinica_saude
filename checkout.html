@@ -3,24 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylecheck.css">
     <title>Checkout</title>
 </head>
 <body>
     <div class="container">
         <h1>Checkout</h1>
+        <hr>
         <form id="checkout-form">
             <div class="form-group">
+                <label for="card-name">Titular do cartão</label>
+                <input type="text" id="card-name" name="card-name" placeholder="Card Name" required>
+            </div>
+            <div class="form-group">
                 <label for="card-number">Numero do cartão</label>
-                <input type="text" id="card-number" name="card-number" placeholder="Card Number" required>
+                <input type="text" id="card-number" name="card-number" placeholder="Card Number" maxlength="12" required>
             </div>
             <div class="form-group">
                 <label for="expiry-date">data de validade</label>
-                <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required>
+                <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" maxlength="4" required>
             </div>
             <div class="form-group">
                 <label for="cvv">CVV</label>
-                <input type="text" id="cvv" name="cvv" placeholder="CVV" required>
+                <input type="text" id="cvv" name="cvv" placeholder="CVV" maxlength="3" required>
             </div>
             <button type="submit">Finalizar compra</button>
         </form>
